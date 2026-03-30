@@ -93,9 +93,6 @@ class SemanticLayerDAO(BaseDAO[SemanticLayer]):
 class SemanticViewDAO(BaseDAO[SemanticView]):
     """Data Access Object for SemanticView model."""
 
-    # SemanticView uses 'uuid' as the primary key field
-    id_column_name = "uuid"
-
     @staticmethod
     def find_by_semantic_layer(layer_uuid: str) -> list[SemanticView]:
         """
